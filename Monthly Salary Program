@@ -1,0 +1,29 @@
+print('1.Manager')
+print('2.Leader')
+print('3.Member')
+choice=int(input('>'))
+if choice==1:
+    PDI=2000
+    ch='Manager'
+elif choice==2:
+    PDI=1800
+    ch='Leader'
+else:
+    PDI=1500
+    ch='Member'
+A_D=int(input("Enter total Abesent Days:"))
+TD=int(input("Total Days in Month:"))
+if(TD==31):
+    W_D=float(23-A_D)
+elif(TD==30):
+    W_D=float(22-A_D)
+elif(TD==29):
+    W_D=float(21-A_D)
+Basic=float(PDI*W_D)
+O_T=int(input("Enter Over Work Time:\t"))
+OTS=float((O_T*PDI)/2)
+G_S=float(Basic+OTS)
+print("----GROSS SALARY----")
+Name=str(input("Enter Name of Employee:\t"))
+print("Enter Designation:",ch)
+print("Gross Salary:",G_S)
